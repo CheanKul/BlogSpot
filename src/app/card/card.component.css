@@ -1,0 +1,15 @@
+.example-card {
+    max-width: 100%;
+    background-color: white;
+  }
+  
+  .example-header-image {
+    background-image: url('E:\Angular\Practice\BlogSpot\src\assets\602092.jpg');
+    background-size: cover;
+  }
+  
+  .collapse{
+    display: none;
+  }
+
+  
