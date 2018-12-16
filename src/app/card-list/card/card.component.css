@@ -1,0 +1,32 @@
+  .card {
+    max-width: 100%;
+    background-color: #aaaaaa;
+    margin-bottom: 5px;
+  }
+
+  .card-header{
+    background-color: #dddddd;
+    align-self: center;
+    border-radius: 10px;
+  }
+
+  .card-header-title{
+    margin-top: 1em ;
+  }
+  
+  .header-image {
+    background-image: url('/assets/Images/602092.jpg');
+    background-size: cover;
+    margin-left: 5px;
+    align-self: center;
+  }
+  
+  .Collapse{
+    display: none;
+    overflow: hidden;
+  }
+  .ShowDetails{
+    display: block;
+  }
+
+  

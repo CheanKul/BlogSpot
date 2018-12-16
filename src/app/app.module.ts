@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
  */
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {CardComponent} from './card/card.component';
+import {CardComponent} from './card-list/card/card.component'
 
 /**
  * Imports For Material Design 
@@ -43,13 +43,16 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { CardListComponent } from './card-list/card-list.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    CardListComponent
+    CardListComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +87,8 @@ import { CardListComponent } from './card-list/card-list.component';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

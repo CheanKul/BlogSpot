@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CardModel } from '../Models/CardModel'
+import { CardModel } from '../../Models/CardModel'
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -7,10 +7,9 @@ import { CardModel } from '../Models/CardModel'
 })
 export class CardComponent implements OnInit {
 
-  show : boolean=true;
-  public Hide = {
-    "Collapse" : !this.show
-  }
+  Collapse : boolean=false;
+  ShowDetails : boolean=true;
+  
   @Input() Card : CardModel
 
   constructor() {        
@@ -22,8 +21,10 @@ export class CardComponent implements OnInit {
 
 
   collapsDetails(){
-    alert("Click");
-      this.show=!this.show;
+       return {
+        Collapse : this.Collapse = !this.Collapse,
+        ShowDetails : this.ShowDetails = !this.ShowDetails
+      };
   }
 
 }
