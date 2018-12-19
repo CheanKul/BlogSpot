@@ -20,6 +20,12 @@
     margin-left: 5px;
     align-self: center;
   }
+
+  .content-image{
+    margin-left: 15%;
+    height: 70%;
+    width: 70%;
+  }
   
   .Collapse{
     display: none;
@@ -27,6 +33,16 @@
   }
   .ShowDetails{
     display: block;
+    height: 500px;
+    
+  }
+
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
   }
 
   

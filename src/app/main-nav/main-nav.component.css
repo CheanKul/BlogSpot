@@ -16,6 +16,7 @@
 .sidenav-link-button{
   width: 90%;
   margin-left: 5%;
+  margin-bottom: 5%;
 }
 
 .active{
@@ -25,3 +26,4 @@
 .hidden{
   display: none;
 }
+
