@@ -5,14 +5,15 @@
     <mat-card-subtitle>{{Card.SubTitile}}</mat-card-subtitle>
   </mat-card-header>
   <hr>
-  <img mat-card-image class="Collaps ShowDetails" [ngClass]="collapsDetails()" [src]="Card.imgURL" alt="Photo of a Shiba Inu">    
-  
-  <mat-card-content  [ngClass]="Hide">    
+  <img mat-card-image class="Collaps ShowDetails" [ngClass]="collapsDetails()" [src]="Card.ImgURL"
+    alt="Photo of a Shiba Inu">
+
+  <mat-card-content [ngClass]="Hide">
     <p>{{Card.Content}}
     </p>
   </mat-card-content>
-  <mat-card-actions  [ngClass]="Hide">
-    <button mat-button >LIKE</button>
-    <button mat-button >SHARE</button>
+  <mat-card-actions [ngClass]="Hide">
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>

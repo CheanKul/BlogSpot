@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from './card/card.component'
-import { CardModel } from '../Models/CardModel';
+import { ICardModel } from '../Models/CardModel';
+import { PostsService } from '../posts.service';
+import { post } from 'selenium-webdriver/http';
+import { map } from 'rxjs/operators';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-card-list',
@@ -9,21 +13,17 @@ import { CardModel } from '../Models/CardModel';
 })
 export class CardListComponent implements OnInit {
 
-  CardList : CardModel[];
+  CardList: ICardModel[] = [];
 
-  
+  constructor(private posts: PostsService) {
 
-  constructor() {
-     
-   }
+  }
 
   ngOnInit() {
-    this.CardList=[];
-    this.CardList.push({Header:"Naruto",Content:"I Love Naruto",SubTitile:"Characters",imgURL:"/assets/Images/602092.jpg"})
-    this.CardList.push({Header:"Death Note",Content:"I Love Naruto",SubTitile:"Characters",imgURL:"/assets/Images/602092.jpg"})
-    this.CardList.push({Header:"Friend",Content:"I Love Naruto",SubTitile:"Characters",imgURL:"/assets/Images/602092.jpg"})
-    this.CardList.push({Header:"Big Bang Theory",Content:"I Love Naruto",SubTitile:"Characters",imgURL:"/assets/Images/602092.jpg"})
-
+    this.posts.get('api/home').subscribe(
+      data => {
+        data.map((element) => this.CardList.push(element));
+      });
   }
 
 }

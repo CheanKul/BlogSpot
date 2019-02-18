@@ -1,11 +1,11 @@
   .card {
-    max-width: 100%;
-    background-color: #aaaaaa;
+    width: auto;
+    background-color: #ff000042;
     margin-bottom: 5px;
   }
 
   .card-header{
-    background-color: #dddddd;
+    background-color: #dddddd40;
     align-self: center;
     border-radius: 10px;
   }
