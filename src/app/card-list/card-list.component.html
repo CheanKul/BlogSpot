@@ -1,3 +1,3 @@
-<div *ngFor="let Card of CardList">
-  <app-card [(Card)]="Card"></app-card>
+<div class="grid-container">
+  <app-card class="grid-item" *ngFor="let Card of CardList" [(Card)]="Card"></app-card>
 </div>

@@ -1,6 +1,7 @@
-export class CardModel{
-    Header : string;
-  SubTitile : string;
-  imgURL : string;
-  Content : string;
+export interface ICardModel {
+  Header: string;
+  SubTitile: string;
+  ImgURL: string;
+  Content: string;
+  [Others: string]: any;
 }
